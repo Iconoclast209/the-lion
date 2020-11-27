@@ -31,14 +31,15 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
             animator.SetBool("isJumping", true);
         }
-        if (Input.GetButtonDown("Crouch") || Input.GetAxisRaw("Vertical") < 0)
+
+        /*if (Input.GetButtonDown("Crouch") || Input.GetAxisRaw("Vertical") < 0)
         {
             crouch = true;
         }
         else if(Input.GetButtonUp("Crouch") || Input.GetAxisRaw("Vertical") >= 0)
         {
             crouch = false;
-        }
+        }*/
 
     }
 
@@ -47,10 +48,10 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("isJumping", false);
     }
 
-    public void OnCrouching(bool boolIsCrouching)
+    /*public void OnCrouching(bool boolIsCrouching)
     {
         animator.SetBool("isCrouching", boolIsCrouching);
-    }
+    }*/
 
     private void FixedUpdate()
     {
